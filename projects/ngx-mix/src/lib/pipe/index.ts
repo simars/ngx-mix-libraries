@@ -1,1 +1,1 @@
-export * from './map.pipe';
+export * from './apply';

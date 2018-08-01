@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import {MapPipe, MapPurePipe} from './pipe/map.pipe';
+import {ApplyPipe, ApplyPurePipe} from './pipe/apply';
 
 @NgModule({
   imports: [
   ],
-  declarations: [MapPipe, MapPurePipe],
-  exports: [MapPipe, MapPurePipe]
+  declarations: [ApplyPipe, ApplyPurePipe],
+  exports: [ApplyPipe, ApplyPurePipe]
 })
 export class NgxMixModule { }
