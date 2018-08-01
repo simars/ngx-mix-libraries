@@ -126,7 +126,7 @@
       "root": "projects/ngx-mix",
       "sourceRoot": "projects/ngx-mix/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "mix",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
