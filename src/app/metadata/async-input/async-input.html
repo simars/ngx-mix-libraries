@@ -1,0 +1,6 @@
+
+<ul>
+  <li *ngFor="let i of indices; trackBy: trackByFn">
+    <h1 [class.selected]="isSelected(i) | async">{{i}}</h1>
+  </li>
+</ul>
