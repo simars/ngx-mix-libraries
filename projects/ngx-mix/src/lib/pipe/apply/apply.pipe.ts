@@ -8,9 +8,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ApplyPurePipe implements PipeTransform {
 
   /**
-   * Transforms the input value with a given function
-   * @param value to map
-   * @param fn , the mapping function
+   * Transforms the input that changes only by <strong>reference</strong> value by applying given <strong>pure</strong>
+   * @param value to to be applied
+   * @param fn , the function to apply.
    */
   transform(value: any, fn: Function): any {
     return fn(value);
@@ -25,9 +25,9 @@ export class ApplyPurePipe implements PipeTransform {
 export class ApplyPipe implements PipeTransform {
 
   /**
-   * Transforms the input value with a given <strong>pure</strong> function
+   * Transforms the input value by applying given function
    * @param value to map
-   * @param fn , the mapping function (function should be pure)
+   * @param fn , the function to apply (function should be pure).
    */
   transform(value: any, fn: Function): any {
     return fn(value);

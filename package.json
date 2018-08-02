@@ -6,6 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "build:lib": "ng build ngx-mix --prod",
+    "publish:lib": "npm publish dist/ngx-mix",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
