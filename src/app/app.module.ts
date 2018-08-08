@@ -7,11 +7,13 @@ import {NgxMixModule} from '../../projects/ngx-mix/src/lib/ngx-mix.module';
 import {AsyncInputComponent} from './metadata/async-input/async-input.component';
 import {CommonModule} from '@angular/common';
 import { AsyncInputDriverComponent } from './metadata/async-input-driver/async-input-driver.component';
+import {ApplyPurePipeComponent} from './pipe/apply-pure-pipe/apply-pure-pipe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ApplyPipeComponent,
+    ApplyPurePipeComponent,
     AsyncInputComponent,
     AsyncInputDriverComponent
   ],

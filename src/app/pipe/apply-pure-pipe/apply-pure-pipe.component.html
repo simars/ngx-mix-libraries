@@ -1,0 +1,37 @@
+<h3>Example 2 : Consider a pipe that sums given array of fibonacci sequence </h3>
+<a href="https://github.com/simars/ngx-mix-libraries/tree/master/src/app/pipe/apply-pure-pipe">
+  Checkout source of this example
+</a>
+
+<div>
+  <h3>If the input object is mutable (like here we are pushing new values in the same array object), we must use <em>pipe pure = false</em></h3>
+  Try  <button (click)="recreateWithNextNumber()">Generate new array with Next Fibonacci Number</button>
+  Compared to <button (click)="pushNextNumber()">Push Next Fibonacci Number to Same Array</button>
+</div>
+
+<h3>applyPure Pipe [
+  works with <button (click)="recreateWithNextNumber()">Generate new array with Next Fibonacci Number</button>
+  but not <button (click)="pushNextNumber()"><del>Push Next Fibonacci Number to Same Array</del></button> ]
+</h3>
+
+<h4>Even though sum() is a pure function, angular puts another restriction on pure pipes; the input must change by reference (new array object)
+</h4>
+<div style="font-size: x-large">
+  SUM of {{fib | json}} =  <strong [style.color]="color"> {{fib | applyPure: sum}}</strong>
+</div>
+
+<hr/>
+
+<h3>apply Pipe [
+  works with both  <button (click)="recreateWithNextNumber()">Generate new array with Next Fibonacci Number</button>
+  and <button (click)="pushNextNumber()">Push Next Fibonacci Number to Same Array</button> ]
+</h3>
+
+<h4>Since apply pipe is pure = false, with standard change detection, it works with both, changes to existing fib array or with new array object
+</h4>
+
+<div style="font-size: x-large">
+  SUM of {{fib | json}} =  <strong> {{fib | apply: sum}}</strong>
+</div>
+
+<hr/>

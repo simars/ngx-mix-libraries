@@ -1,3 +1,35 @@
-<div style="font-size: x-large">
-  <span>SUM of {{fib | json}} = </span> <span> {{fib | applyPure: sum}}</span>
+<h3>Example 1: Consider an example, where apply metric to/from imperial unit conversion on mass (kg. to/from lbs) </h3>
+<a href="https://github.com/simars/ngx-mix-libraries/tree/master/src/app/pipe/apply-pure-pipe">
+  Checkout source of this example
+</a>
+
+<hr/>
+<label for="value">Input {{fromScale}}
+  <input id="value" [value]="value" type="number" (input)="value = $event.target.value" >
+</label>
+
+<button (click)="toggleScale()">Convert to {{toScale}}</button> | 1 kg = 2.204 lbs
+
+<hr/>
+
+<h3>With applyPure Pipe :(</h3>
+<h4>Note: with applyPure pipe, the conversion pipe is only applied if input changes, not when only the scale toggles</h4>
+<div style="font-size: x-large" [style.color]="(value > (value | applyPure: covertValue)?toScale == 'kg': toScale == 'lbs')?'green':'red'">
+  {{value}} {{fromScale}} = {{value | applyPure: covertValue}} {{toScale}}
 </div>
+<h4>convertValue(input) is <strong>not a pure function </strong>it depends on component.toScale, which it closes over from outside (component.toScale)</h4>
+<h4>If use it using <em>applyPure</em> pipe (pure = true), the pipe bindings will not be evaluated when the toScale changes on press of button as it detects input only</h4>
+<hr/>
+
+<h3>With apply Pipe :)</h3>
+<h4>Note: with apply pipe, the conversion pipe is applied with standard change detection, which detects changes to both, input and the scale</h4>
+<div style="font-size: x-large" [style.color]="(value > (value | apply: covertValue)?toScale == 'kg': toScale == 'lbs')?'green':'red'">
+  {{value}} {{fromScale}} =  {{value | apply: covertValue}} {{toScale}}
+</div>
+<h4>We know convertValue(input) is <strong>not a pure function </strong> hence we are using it with apply pipe not <del>applyPure pipe</del></h4>
+<h4>The <em>apply</em> pipe (pure = false), the pipe bindings will be evaluated when the toScale changes on press of button as well as on changes to input</h4>
+
+<hr/>
+
+
+

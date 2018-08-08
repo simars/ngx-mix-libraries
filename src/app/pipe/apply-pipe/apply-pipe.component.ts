@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-apply-pipe',
@@ -7,12 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApplyPipeComponent {
 
-  constructor() { }
+  value = 0;
+  fromScale: 'kg' | 'lbs' = 'kg';
+  toScale: 'kg' | 'lbs' = 'lbs';
+  toggle = false;
 
-  fib = [1, 2, 3, 5, 8, 13];
+  constructor() {}
 
-  public sum(collection: [number]): number {
-    return collection.reduce((first, second) => first + second);
+  toggleScale() {
+    this.toggle = !this.toggle;
+    this.fromScale = this.toggle ?  'lbs' : 'kg';
+    this.toScale = this.toggle ? 'kg' : 'lbs' ;
+  }
+
+  covertValue = (number) => {
+    return this.toScale === 'kg' ? number / 2.2 : number * 2.204;
   }
 
 }
