@@ -9,7 +9,7 @@
  * See a working example by clicking on [CodePen](https://codepen.io/simars/pen/ZMYxrm)
  
  
-  ```
+```
   class AppComponent implements OnInit  {
    registerForm: FormGroup;
    constructor( @Inject(FormBuilder) private formBuilder: FormBuilder) {}
@@ -28,7 +28,7 @@
        );
     }
 
- * ```
+```
 
 
 #NgxMixLibraries

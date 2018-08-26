@@ -64,6 +64,10 @@
     "angular",
     "form",
     "pipes",
+    "rx",
+    "rxjs",
+    "meta",
+    "decorators",
     "component",
     "service"
   ]

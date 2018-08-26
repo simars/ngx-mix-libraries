@@ -43,7 +43,7 @@ Learn about [pure and impure | Pipes](https://angular.io/guide/pipes)
 [projects/ngx-mix-form](projects/ngx-mix-form)
 
  
-  ```
+```
   class AppComponent implements OnInit  {
    registerForm: FormGroup;
    constructor( @Inject(FormBuilder) private formBuilder: FormBuilder) {}
@@ -62,7 +62,7 @@ Learn about [pure and impure | Pipes](https://angular.io/guide/pipes)
        );
     }
 
- * ```
+```
  
 
 ## Build, Deploy, Test and Try out
@@ -78,7 +78,7 @@ Wrapper projects includes `ngx-mix` library in it's path
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-Run `npm run build:lib` or `ng build ngx-mix --prod` to builds ngx-mix library bundle for distrubition in `dist/` 
+Run `npm run build:lib` or `ng build ngx-mix --prod` to builds ngx-mix library bundle for distribution in `dist/` 
 
 ### Running unit tests
 
