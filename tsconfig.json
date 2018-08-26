@@ -22,6 +22,12 @@
       ],
       "ngx-mix/*": [
         "dist/ngx-mix/*"
+      ],
+      "ngx-mix-form": [
+        "dist/ngx-mix-form"
+      ],
+      "ngx-mix-form/*": [
+        "dist/ngx-mix-form/*"
       ]
     }
   }

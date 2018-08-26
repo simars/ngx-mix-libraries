@@ -161,6 +161,46 @@
           }
         }
       }
+    },
+    "ngx-mix-form": {
+      "root": "projects/ngx-mix-form",
+      "sourceRoot": "projects/ngx-mix-form/src",
+      "projectType": "library",
+      "prefix": "ngx-mix",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-mix-form/tsconfig.lib.json",
+            "project": "projects/ngx-mix-form/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ngx-mix-form/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-mix-form/src/test.ts",
+            "tsConfig": "projects/ngx-mix-form/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-mix-form/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-mix-form/tsconfig.lib.json",
+              "projects/ngx-mix-form/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-mix-libraries"
