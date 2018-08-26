@@ -3,7 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 This projects is houses ngx-mix library as a library project and wraps it with some demonstrations in the root project
 
-## Use Cases
+## NgxMix
+
+[projects/ngx-mix-form](projects/ngx-mix-form)
 
 ### Pipes
 
@@ -32,6 +34,36 @@ export class ApplyPipeComponent {
 > __apply__ Pipe Transforms the input value by applying given function
 
 Learn about [pure and impure | Pipes](https://angular.io/guide/pipes)
+
+
+## NgxMixForm
+
+> __CustomValidators__ Build custom cross-field validators for Reactive Froms, ex where one field is required or not required based on state of another field
+
+[projects/ngx-mix-form](projects/ngx-mix-form)
+
+ 
+  ```
+  class AppComponent implements OnInit  {
+   registerForm: FormGroup;
+   constructor( @Inject(FormBuilder) private formBuilder: FormBuilder) {}
+
+   ngOnInit() {
+        this.registerForm = this.formBuilder.group({
+            firstName: ['', Validators.required],
+            phone: ['', [Validators.pattern('[0-9]*')]],
+            email: ['', [ Validators.email]]
+        },
+        {
+          validator: [
+            CustomValidators.requiredEither('email', 'phone')
+          ]
+        }
+       );
+    }
+
+ * ```
+ 
 
 ## Build, Deploy, Test and Try out
 

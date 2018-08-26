@@ -52,5 +52,19 @@
     "protractor": "~5.3.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1"
-  }
+  },
+  "author": "Simar Singh <simarpaulsingh@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/simars/ngx-mix-libraries/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simars/ngx-mix-libraries.git"
+  },
+  "keywords": [
+    "angular",
+    "form",
+    "pipes",
+    "component",
+    "service"
+  ]
 }

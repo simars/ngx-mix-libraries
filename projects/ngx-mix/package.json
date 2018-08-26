@@ -5,5 +5,19 @@
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
     "rxjs": "^6.0.0"
-  }
+  },
+  "author": "Simar Singh <simarpaulsingh@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/simars/ngx-mix-libraries/blob/master/README.md#NgxMix",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simars/ngx-mix-libraries.git"
+  },
+  "keywords": [
+    "angular",
+    "form",
+    "pipes",
+    "component",
+    "service"
+  ]
 }
