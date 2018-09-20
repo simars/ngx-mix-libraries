@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
+import {NgxMixFormReactiveModule} from './reactive';
 
 @NgModule({
-  imports: [],
-  declarations: [],
-  exports: []
+  exports: [NgxMixFormReactiveModule]
 })
 export class NgxMixFormModule { }
