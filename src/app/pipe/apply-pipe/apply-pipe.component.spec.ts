@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ApplyPipeComponent } from './apply-pipe.component';
+import {CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
+import {NgxMixModule} from '../../../../projects/ngx-mix/src/lib/ngx-mix.module';
 
 describe('MappingPipeComponent', () => {
   let component: ApplyPipeComponent;
@@ -8,7 +10,9 @@ describe('MappingPipeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ApplyPipeComponent ]
+      imports: [NgxMixModule],
+      declarations: [ ApplyPipeComponent ],
+      schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));
